@@ -1,0 +1,243 @@
+@font-face {
+  font-family: 'Courgette';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Courgette Regular'), local('Courgette-Regular'), url(https://fonts.gstatic.com/s/courgette/v6/wEO_EBrAnc9BLjLQAUk1VvoK_kgXiQ.woff2) format('woff2');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+/*
+    margin: 0;
+    padding: 0;
+*/
+    text-align: center;
+    background-image: linear-gradient(to right,RGBA(6, 36, 59, 1.00), RGBA(18, 77, 134, .75));
+    }
+
+
+
+#container {
+    display: grid;
+    margin: .25em;
+    background: RGBA(201, 162, 115, 1.00);
+    border-radius: 15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header"
+    "logo logo logo"
+    "nav nav nav"
+/*    "photo"*/
+    "mContent mContent mContent"
+    "footer footer footer";
+        
+    
+/*    border: 12px solid green;*/
+    }
+
+
+
+header {
+    grid-area: header;
+    text-align: center;
+    position: fixed;
+    z-index: 999:
+    width: 100%;
+    
+    
+/*    border: 6px solid purple;*/
+
+    }
+
+header h1 {
+/*    display: inline-block;*/
+    font-family: 'Courgette';
+    }
+
+
+.logo img{
+
+    grid-area: logo;
+    
+    margin: 10px;
+
+    width: 80px;
+    height: 80px;
+    
+/*    border: 2px solid red;*/
+    
+}
+
+.photo {
+    grid-area: photo;
+
+/*    border: 6px solid blue;*/
+/*
+    -webkit-clip-path: circle(44.7% at 50% 50%);
+    clip-path: circle(30.46% at 50.84% 27.39%);
+*/
+
+}
+
+
+nav {
+    grid-area: nav;
+    position: absolute; 
+    text-align: left;
+    top: 100%;
+    left: 0;
+    
+    
+/*    border: 6px solid green;*/
+    }
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+}
+
+nav li {
+    margin-bottom: .25em;
+    margin-left: 1em;
+    
+}
+
+nav a {
+    font-size: 4.2em;
+    border: solid red 2px;
+    
+    text-transform: uppercase;
+}
+
+a:link {
+    font: 900 18px/36px Helvetica, Arial, sans-serif;
+    color: #036;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    }
+
+a:visited {
+    font: 900 18px/36px Helvetica, Arial, sans-serif;
+    color: #036;
+    text-decoration: none;
+    text-align: center;
+    }
+
+a:hover {
+    font: 900 18px/36px Helvetica, Arial, sans-serif;
+    color: #903;
+    text-decoration: none;
+    text-align: center;
+    }
+
+a:active {
+    font: 900 18px/36px Helvetica, Arial, sans-serif;
+    color: #006;
+    text-decoration: none;
+    text-align: center;
+    }
+
+
+.mContent p{
+    grid-area: mContent;
+    margin: 5%; 
+    font-size: 1.25em;
+/*    border: 6px solid yellow;*/
+    }
+
+h1 {
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+    border-top: 2px solid red;
+    height: 55px;
+    text-align: center;
+/*    border: 6px solid pink;    */
+    }
+
+
+footer p a:link {
+    font: normal 12px Helvetica, Arial, sans-serif;
+    color: #036;
+    text-decoration: none;
+    padding: 20px 0px 0px;
+    }
+
+footer p a:visited {
+    font: normal 12px Helvetica, Arial, sans-serif;
+    color: #036;
+    text-decoration: none;
+    margin: 0px;
+    padding: 20px 0px 0px;
+    }
+
+footer p a:hover {
+    font: normal 12px Helvetica, Arial, sans-serif;
+    color: #903;
+    text-decoration: none;
+    padding-top: 20px;
+    }
+
+footer p a:active {
+    font: normal 12px/12px Helvetica, Arial, sans-serif;
+    color: #036;
+    text-decoration: none;
+    padding-top: 20px;
+    }
+
+
+/* START MEDIA QUERIES */
+
+@media screen and (min-width:480px) {
+    /* style changes when the screen gets larger */
+    
+#container {
+    display: grid;
+    margin: 1.75em;
+    text-align: left; 
+    background: RGBA(201, 162, 115, 1.00);
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header"
+    "logo logo nav"
+/*    "nav nav nav"*/
+    "photo mContent mContent"
+    "footer footer footer";
+        
+
+    }  
+img {
+    width: 100px;
+    height: 100px;
+}
+    
+
+}
+
+
+    
+@media screen and (min-width:800px) {
+        /* And even larger */
+
+    img {
+    width: 200px;
+    height: 200px;
+}
+    header h1 {
+        font-size: 4em;
+    }
+
+
+}
+
